@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+WORKDIR /app
+##copy the file from Dcoker foler app.py to Ubuntu image app folder
+COPY app.py .
+RUN apt-get update && apt-get install -y python3
+CMD ["python3", "app.py"]
